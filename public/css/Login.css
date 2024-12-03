@@ -1,0 +1,103 @@
+/* Fondo del formulario */
+body {
+    background: linear-gradient(to right, #A1D9F1, #A1F4D3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor del formulario */
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Título del formulario */
+.container h3 {
+    color: #4AAE9B;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Logo del formulario */
+.container img {
+    border: 2px solid #4AAE9B;
+    padding: 5px;
+}
+
+/* Input y etiquetas */
+.form-floating label {
+    color: #4AAE9B;
+}
+
+.form-floating input {
+    border: 1px solid #A1D9F1;
+    border-radius: 8px;
+}
+
+/* Botón */
+button#btn_iniciar {
+    background: #4AAE9B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button#btn_iniciar:hover {
+    background: #3A9C8A;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 576px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .container img {
+        width: 50%;
+    }
+
+    button#btn_iniciar {
+        font-size: 14px;
+        padding: 8px;
+    }
+}/* Estilo para el botón */
+.btn-registro {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul Bootstrap */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover */
+.btn-registro:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Responsivo: Tamaño del texto en pantallas pequeñas */
+@media (max-width: 768px) {
+    .btn-registro {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

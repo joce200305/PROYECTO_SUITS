@@ -1,0 +1,156 @@
+/* Navbar general */
+.navbar {
+  background: linear-gradient(to right, #A1D9F1, #A1F4D3);
+  padding: 10px 20px; /* Ajusté el padding para que no ocupe mucho espacio */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  border-bottom: 2px solid #76D7E0;
+  position: fixed;
+  top: 0;
+  left: 100;
+  width: 100%;
+  z-index: 1030;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between; /* Alineación con flexbox */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Espaciado de la página */
+body {
+  padding-top: 120px; /* Ajusté el padding para evitar que se sobreponga la navbar */
+}
+
+/* Estilo del logo y nombre */
+.navbar-brand {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1C8D9C;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #2B4D5C;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.navbar-toggler-icon {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+/* Botones de navegación */
+.nav-item .btn-nav {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #2B4D5C;
+  border-radius: 20px;
+  padding: 8px 15px; /* Tamaño moderado */
+  font-size: 14px; /* Font-size más pequeño para una mejor alineación */
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-item .btn-nav:hover {
+  background-color: #76D7E0;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Dropdown del usuario */
+.dropdown-menu {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .btn-danger {
+  background-color: #FF6B6B;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu .btn-danger:hover {
+  background-color: #D9534F;
+  transform: scale(1.05);
+}
+
+/* Texto central */
+.text-center {
+  color: #444;
+  font-size: 14px;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .nav-item .btn-nav {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center; /* Alinea los elementos de la navbar al centro */
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .nav-item .btn-nav {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .dropdown-menu .btn-danger {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 15px; /* Reduce el padding en pantallas muy pequeñas */
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .nav-item .btn-nav {
+    font-size: 12px;
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+  }
+
+  .dropdown-menu .btn-danger {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,152 @@
+/* Fondo animado */
+body {
+    background: linear-gradient(135deg, #A1D9F1, #A1F4D3);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Animación del fondo con movimiento */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(to right, #A1D9F1, #A1F4D3);
+    }
+    50% {
+        background: linear-gradient(to right, #A1F4D3, #A1D9F1);
+    }
+    100% {
+        background: linear-gradient(to right, #A1D9F1, #A1F4D3);
+    }
+}
+
+/* Estilos generales de la tabla */
+.container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px;
+}
+
+/* Título */
+h2 {
+    color: #1C8D9C;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Tabla */
+/* Estilos generales de la tabla */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #1C8D9C; /* Fondo de encabezado */
+    color: #000; /* Cambiar el color del texto a negro */
+}
+
+td {
+    color: #000;
+}
+
+
+/* Botones */
+button.btn-primary {
+    background-color: #A1F4D3;
+    color: #2B4D5C;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    transform: scale(1.05);
+    background-color: #76D7E1;
+}
+
+button.btn-secondary {
+    background-color: #E1F5FE;
+    color: #1C8D9C;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+button.btn-secondary:hover {
+    background-color: #B3E5FC;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.modal-header {
+    background-color: #A1F4D3;
+}
+
+.modal-header .modal-title {
+    color: #2B4D5C;
+}
+
+.modal-body .form-floating input {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.modal-body .form-floating label {
+    color: #1C8D9C;
+}
+
+/* Asegurando responsividad para todos los dispositivos */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .modal-dialog {
+        max-width: 90%;
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

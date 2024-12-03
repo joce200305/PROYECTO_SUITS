@@ -1,0 +1,206 @@
+/* Fondo con cuadrados moviéndose */
+body {
+    background: linear-gradient(135deg, #A1D9F1, #A1F4D3);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;  /* Previene que se desborde el fondo de forma horizontal */
+}
+
+/* Animación del fondo con cuadrados */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(to right, #A1D9F1, #A1F4D3);
+    }
+    50% {
+        background: linear-gradient(to right, #A1F4D3, #A1D9F1);
+    }
+    100% {
+        background: linear-gradient(to right, #A1D9F1, #A1F4D3);
+    }
+}
+
+@keyframes moveSquares {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(200px) translateY(100px);
+    }
+    50% {
+        transform: translateX(0) translateY(200px);
+    }
+    75% {
+        transform: translateX(-200px) translateY(100px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.square {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100px;
+    height: 100px;
+    animation: moveSquares 5s infinite ease-in-out;
+    z-index: -1;  /* Mantiene el fondo detrás del contenido */
+}
+
+/* Navbar fija en la parte superior */
+.navbar {
+    background: linear-gradient(to right, #A1D9F1, #A1F4D3);
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #76D7E0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;  /* Mantiene la navbar por encima del contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Para evitar que la navbar se solape con el contenido */
+body {
+    padding-top: 80px;  /* Ajusta según la altura de la navbar */
+}
+
+/* Estilo del contenido principal */
+.container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 80px auto;  /* Asegura que no se sobreponga a la navbar */
+    z-index: 1;  /* Asegura que el contenido esté por encima del fondo */
+}
+
+/* Título */
+h2 {
+    color: #1C8D9C;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Botones */
+button.btn-primary {
+    background-color: #A1F4D3;
+    color: #2B4D5C;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    transform: scale(1.05);
+    background-color: #76D7E1;
+}
+
+/* Responsividad: Ajustes para pantallas medianas */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 12px 18px;  /* Reduce el padding de la navbar */
+    }
+
+    .container {
+        padding: 15px;
+        width: 90%; /* Hace que el contenedor sea un poco más pequeño en pantallas grandes */
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;  /* Ajuste de tamaño en pantallas más pequeñas */
+    }
+
+    .container {
+        padding: 12px;
+        width: 95%; /* El contenedor ocupa casi todo el ancho */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .modal-dialog {
+        max-width: 90%;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Responsividad: Ajustes para dispositivos muy pequeños */
+@media (max-width: 576px) {
+    .table {
+        font-size: 12px;  /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    .btn {
+        font-size: 14px; /* Botones más pequeños en pantallas móviles */
+    }
+
+    .modal-dialog {
+        max-width: 90%;  /* Hacer los modales más pequeños en móviles */
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #1C8D9C; /* Fondo de encabezado */
+    color: #000; /* Cambiar el color del texto a negro */
+}
+
+td {
+    color: #000;
+}
